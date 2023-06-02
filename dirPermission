@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Script Name:                  dirPermission (Challenge 03)
+# Author:                       Jason
+# Date of latest revision:      06/01/2023
+# Purpose:                      This script allows the user to select a directory and change the file permissions of the files in the directory.
+
+# Declaration of variables
+permissions=("File Permissions", "0:No Permissions", "1:Execute Only", "2:Write Only", "3:Write and Execute", "4:Read Only", "5:Read and Execute", "6:Read and Write", "7:Read, Write and Execute")
+
+# Main
+read -p "Enter the path of the directory" path
+#Take the path of the directory as an user input
+
+# Display all file permissions.
+for perm in "${permissions[@]}";
+do
+    echo $perm
+done
+
+# Prompt the user to input the permission values for each level of user as a 3 digit number, each between 0 and 7 read answer and store it as the variable ans. 
+echo "from the listed permission options, enter 3 digits to update file permissions for Owner Group and Public , examples 755 or 312"
+read newPerm
+
+# Change permissions in the selected directory using chmod command.
+chmod -R $newPerm $path
+
+# Inform the user the permissions have been changed.
+echo "Permissions have been changed"
+
+# End
