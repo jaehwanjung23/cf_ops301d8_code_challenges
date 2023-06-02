@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script Name:                  copyAndAppend
-# Author:                       David Prutch
+# Author:                       Jason J
 # Date of latest revision:      05/31/2023
 # Purpose:                      Copy system log to current working directory and append date and time to file name
 
