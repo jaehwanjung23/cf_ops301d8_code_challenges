@@ -8,8 +8,7 @@
 
 # Declaration of variables
 # Array to hold menu options
-menu_items=("1: Print Hello World", "2: Ping my PC", "3: Display my IP information", "4: Exit")
-# get the users ip address, not net tools needs to be installed use: sudo apt install net-tools.
+menu_items=("1: Print Hello World", "2: Ping this machine", "3: IP info", "4: Exit")
 
 # Declaration of functions
 
@@ -40,7 +39,7 @@ do
         break
     # If the user selects any other integer they are shown the message below and the loop repeats.
     else 
-        echo "That is not an option, Please try again"
+        echo "Invalid option, try again."
     fi
 done
 
